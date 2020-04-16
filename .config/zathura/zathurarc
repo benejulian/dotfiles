@@ -1,0 +1,6 @@
+set font "monospace normal 12"
+set adjust-open "width"
+
+set selection-clipboard "clipboard"
+
+set zoom-min 110

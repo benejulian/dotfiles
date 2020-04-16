@@ -1,0 +1,76 @@
+#!/bin/bash
+#
+#	~/.scripts/colorscheme
+#	Handles colorschemes using pywal	
+#
+#
+
+usage () {
+	echo "USAGE:"
+	echo -e "[fn]	  generates and sets a color scheme based on provided file\n\t(same as 'wal -i [fn]')"
+	echo -e "-s	  saves most recent color scheme"
+	echo -e "-l	  lists saved color schemes"
+	echo -e "-L	  lists color schemes in pywal's cache"
+	echo -e "-f [fn]  sets current color scheme to [fn]"
+	echo -e "-fn [fn] sets current color scheme to [fn] without changing wallpaper"
+	echo -e "-p	  displays current color values"
+}
+
+# Make sure necessary directories are present
+pywal_dir=~/.cache/wal/schemes
+scheme_dir=~/.config/colorschemes
+[ ! -d $pywal_dir ] && echo "$pywal_dir doesn't exist." && exit 1
+[ ! -d $scheme_dir ] && echo "Creating $scheme_dir..." && mkdir "$scheme_dir"
+
+# Saves the first color scheme listed by `ls -tu $pywal_dir` to
+# the colorscheme config folder under a user-specified name
+save_newest() {
+	# Get the most recently created file
+	oIFS="$IFS"
+	IFS=$'\n'
+	schemes=($(ls -tu $pywal_dir))
+	s=${schemes[0]}
+	IFS="$oIFS"
+
+	# Prompt for a color scheme file name
+	read -p "Color Scheme Name: " name
+
+	# Copy the file to /home/mjulian/.config/colorschemes
+	[ -z "$name" ] && echo "No name provided: exiting." && exit 1
+	cp -i "$pywal_dir/$s" "$scheme_dir/$name"
+}
+
+# Sets the current color scheme. If the -fn argument is passed, the
+# wallpaper will not be changed.
+set_scheme() {
+	[ -z "$1" ] && echo "No color scheme provided." && exit 1
+	[ ! -f "$scheme_dir/$1" ] && echo "$scheme_dir/$1 does not exist." && exit 1
+	[ -n "$2" ] && wal -n -f "$scheme_dir/$1" && exit 0
+	wal -f "$scheme_dir/$1" && exit 0
+
+}
+
+# Outputs the current color scheme
+print_current() {
+	wal --preview
+	for i in {0..15}; do
+		if [[ $i -eq 0 ]]; then
+			tput setaf 15
+		else
+			tput setaf $i
+		fi
+		grep -e "color$i\"" ~/.cache/wal/colors.json | \
+			sed s'/^\s*//g' | sed s'/"//g' | sed s'/,//g'
+	done
+	tput sgr0
+}
+
+case $1 in
+	-s) save_newest ;;
+	-l) ls ~/.config/colorschemes ;;
+	-L) ls -tu ~/.cache/wal/schemes ;;
+	-f) set_scheme "$2" ;;
+	-fn) set_scheme "$2" "false" ;;
+	-p) print_current ;;
+	-h|*) usage ;;
+esac

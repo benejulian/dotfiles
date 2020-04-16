@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+#	~/.scripts/polydate
+#	Sets the time and date for polybar date module
+#
+#
+
+t=$(date "+%l:%M" | sed s'/ //')
+d=$(date "+%a %m/%d" | sed s'/ 0/ /')
+
+echo "$d $t"

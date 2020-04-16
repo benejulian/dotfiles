@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/mjulian/Pictures/wallpaper/neon/597222.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#08090F",
+        "foreground": "#82cdd9",
+        "cursor": "#82cdd9"
+    },
+    "colors": {
+        "color0": "#08090F",
+        "color1": "#D4CE2C",
+        "color2": "#253FAA",
+        "color3": "#106198",
+        "color4": "#B333A5",
+        "color5": "#EC10A2",
+        "color6": "#F30ADA",
+        "color7": "#82cdd9",
+        "color8": "#5b8f97",
+        "color9": "#D4CE2C",
+        "color10": "#253FAA",
+        "color11": "#106198",
+        "color12": "#B333A5",
+        "color13": "#EC10A2",
+        "color14": "#F30ADA",
+        "color15": "#82cdd9"
+    }
+}

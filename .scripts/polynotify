@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+#	~/.scripts/polynotify
+#	Uses polybars to provide dialog functionality
+#	to a tiling-based gui
+#
+
+# Path to config files
+dir=~/.config/polybar/dialog
+default="$dir/default"
+[ ! -d "$dir" ] mkdir "$default"
+[ ! -d "$default" ] && mkdir "$default"
+
+# Instantiate a new polybar with a unique config file
+config0="$dir/config0"
+[ ! -f "$config0 ] && cp "$default/config0" "$dir/config0"
+polybar -c "$config0"
+
+
+
+
+# Get it to center the output of notify-send in the bar

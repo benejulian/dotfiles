@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+#	~/.scripts/polybluetooth
+#	
+#
+#
+
+# Get the MAC address of the Soundcore speaker
+MAC_ADDR="$(bluetoothctl paired-devices | grep Soundcore | cut -d' ' -f2)"
+# Make a tmp file to hold output & errors
+tmpfile=$(mktemp -t "bluetoothctl.XXXXXX")
+
+# If found, notify
+[ -n "$MAC_ADDR" ] && notify-send "Found Soundcore speaker: $MAC_ADDR" && notify-send "Attempting to connect..."
+
+# Attempt a connection
+if [ $(bluetoothctl info "$MAC_ADDR" | grep Connected | cut -d' ' -f2) != "yes" ]; then
+	tmpfile=$(mktemp -t "bluetoothctl.XXXXXX")
+	bluetoothctl connect "$MAC_ADDR" &> "$tmpfile"
+	notify-send "$(cat "$tmpfile" | grep -v Attempting)"
+else
+	notify-send "Already connected"
+fi

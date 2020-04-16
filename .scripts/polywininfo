@@ -1,0 +1,48 @@
+#!/bin/bash
+#
+#	~/.scripts/polywininfo
+#	Supplies information about the currently	
+#	focused window to polybar.
+#
+
+### Functions
+print_urxvt () {
+	info=$(echo "$1" | awk -F'::' '{print $4}')
+	dir=$(echo "$info" | awk '{print $2}' | sed -e 's/[\(\)]//g')
+	[ "$dir" = '+' ] && dir=$(echo "$info" | awk '{print $3}' | sed -e 's/[\(\)]//g')
+	
+	if [[ "$info" =~ 'VIM' ]]; then
+		echo "$dir/$(echo "$info" | awk '{print $1}')"
+	elif [[ "$info" =~ "$USER@$HOST" ]]; then
+		loc=$(echo "$info" | awk -F: '{print $2}')
+		echo "$loc/"
+	else
+		echo "$1"
+	fi
+}
+
+print_firefox () {
+	echo "$1" | awk -F'::' '{print $4}' | sed 's/- Mozilla Firefox//'
+}
+
+### Run
+id=$(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/ {print $NF}')
+
+# if there is no root window, echo an empty string and exit
+[[ "$id" =~ "0x0" ]] && echo "::::::" && exit 0
+
+# get current window info
+[ -n "$id" ] && info=$(xprop -id $id)
+class=$(echo "$info" | awk -F'=' '/WM_CLASS\(STRING\)/ {print $2}' | awk -F'"' '{print $2}')
+cmd=$(echo "$info" | awk -F'=' '/WM_COMMAND\(STRING\)/ {print $2}' | awk -F'"' '{print $2}')
+pid=$(echo "$info" | awk -F'=' '/_NET_WM_PID\(CARDINAL\)/ {print $2}' | awk '{print $1}')
+name=$(echo "$info" | awk -F'=' '/WM_NAME\(STRING\)/ {print $2}' | awk -F'"' '{print $2}')
+
+wininfo=$(echo -e "$class::$cmd::$pid::$name")
+
+case "$class" in
+	urxvt) print_urxvt "$wininfo" ;;
+	Navigator) print_firefox "$wininfo" ;;
+	code-oss) echo "$class" ;;
+	*) echo "$wininfo" ;;
+esac

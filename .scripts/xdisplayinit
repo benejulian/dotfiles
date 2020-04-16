@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+#	~/.scripts/xdisplayinit
+#	Uses xrandr to find connected displays and	
+#	apply settings to each.
+#
+
+# Get each line that contains the word 'connected'
+# (excluding 'disconnected' with \b[eginning of word] regex)
+
+oIFS="$IFS"
+IFS=$'\n'
+displays=($(xrandr | grep -e '\bconnected' | awk '{print $1}'))
+IFS="$oIFS"
+
+xrandr --output "${displays[0]}" --auto --output "${displays[1]}" --auto --scale 2x2 --right-of "${displays[0]}"

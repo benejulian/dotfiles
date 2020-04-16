@@ -1,0 +1,29 @@
+[global]
+    monitor = 0
+    follow = keyboard
+        # One of keyboard, mouse, none,
+        # to specify a display
+    geometry = "0x5-28+40"
+    notification_height = 32
+    frame_width = 0
+    separator_color = frame
+    font = LiberationMono 14
+    alignment = right
+    vertical_alignment = center
+    icon_position = right
+    max_icon_size = 18
+
+[urgency_low]
+    background = "#aea356"
+    foreground = "#040304"
+[urgency_normal]
+    background = "#aea356"
+    foreground = "#040304"
+[urgency_critical]
+    background = "#aea356"
+    foreground = "#040304"
+
+# Restart dunst to see changes:
+# pidof dunst && killall dunst
+# dunst > /dev/null 2>&1 &
+

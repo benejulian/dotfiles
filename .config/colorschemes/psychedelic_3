@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/mjulian/Pictures/wallpaper/psychedelic/586866.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#0A0F0C",
+        "foreground": "#d8c9d3",
+        "cursor": "#d8c9d3"
+    },
+    "colors": {
+        "color0": "#0A0F0C",
+        "color1": "#57973C",
+        "color2": "#F4E41D",
+        "color3": "#BABB44",
+        "color4": "#2066AD",
+        "color5": "#C558AA",
+        "color6": "#2AB1C4",
+        "color7": "#d8c9d3",
+        "color8": "#978c93",
+        "color9": "#57973C",
+        "color10": "#F4E41D",
+        "color11": "#BABB44",
+        "color12": "#2066AD",
+        "color13": "#C558AA",
+        "color14": "#2AB1C4",
+        "color15": "#d8c9d3"
+    }
+}

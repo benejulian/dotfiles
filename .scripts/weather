@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+#
+#	Fetches weather info from darksky.net
+#
+
+# Fetches new weather info and puts it in ~/.tmp/weather.json
+fetch_new() {
+	KEY_IPSTACK="aa96000a28d41364c51559eeffe74eef"
+	KEY_DARKSKY="d5ab2efd9f8fb45de6b2925c8e327883"
+
+	# Fetch IP address of this network
+	IP=$(curl -s https://ipinfo.io/ip)
+
+	# Fetch location information from IP address
+	CITY=""
+	REGION=""
+	LAT=""
+	LON=""
+
+	while read -r CITY; do
+		read -r REGION;
+		read -r LAT;
+		read -r LON;
+		done <<<$(curl -s http://api.ipstack.com/check?access_key=$KEY_IPSTACK | \
+		  jq '.city, .region_code, .latitude, .longitude')
+
+	URL="https://api.darksky.net/forecast/$KEY_DARKSKY/$LAT,$LON?exclude=minutely,hourly,alerts,flags"
+	FILE=~/.tmp/weather.json
+
+	curl -s $URL -o $FILE
+}
+
+get_icon() {
+	ICON=""
+	case $1 in
+		clear-day) ICON= ;;
+		clear-night) ICON= ;;
+		cloudy) ;&
+		fog) ICON= ;;
+		partly-cloudy-day) ICON= ;;
+		partly-cloudy-night) ICON= ;;
+		rain) ;&
+		sleet) ICON= ;;
+		snow) ICON= ;;
+		wind) ICON= ;;
+	esac
+	echo $ICON
+}
+
+# If weather.json doesn't exist or is older than 1 hour, refresh
+if [ ! -f ~/.tmp/weather.json ]; then
+	fetch_new
+fi
+
+if [[ $(stat -c %Y ~/.tmp/weather.json) -lt $(($EPOCHSECONDS-600)) ]]; then
+	fetch_new
+fi
+
+while read -r COND; do
+	read -r TEMP;
+	ICON=$(get_icon $(echo $COND | sed s'/\"//g'))
+	echo "$ICON $(echo $TEMP | cut -d. -f 1)°"
+done <<<$(cat ~/.tmp/weather.json | jq '.currently.icon, .currently.temperature')

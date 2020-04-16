@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+#	Uses dmenu to display/search for emojis
+#	listed in ~/.scripts/docs/emoji and copies
+#	the selection to the clipboard
+#
+
+emoji_list=~/.scripts/data/emoji
+e=$(cut -d':' -f1,2 "$emoji_list" | \
+	dmenu -i -l 30 -fn Symbola-14 | \
+	awk '{print $1}' | \
+	tr -d '\n')
+
+echo "$e" | xclip -selection clipboard
+
+notify-send "$e copied to clipboard"

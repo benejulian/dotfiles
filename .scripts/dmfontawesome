@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+#	~/.scripts/dmfontawesome
+#	Uses dmenu to display & search for fontawesome	
+#	icons listed in ~/.scripts/docs/fontawesome and copies
+#	the selection to the clipboard
+#
+
+sel=$(cat ~/.scripts/data/fontawesome | \
+	dmenu -fn 'Font Awesome 5 Free Solid, Liberation Mono-18' -i -l 40 | \
+	cut -d' ' -f1 | \
+	tr -d '\n')
+
+echo "$sel" | xclip -selection clipboard
+
+[ -n "$sel" ] && notify-send "Copied to clipboard: $(xclip -o -selection clipboard)" 

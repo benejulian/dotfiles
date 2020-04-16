@@ -1,0 +1,110 @@
+#!/bin/bash
+#
+#	~/.scripts/bbg
+#	Handles setting the background image
+#
+
+usage () {
+	echo -e "setbg	[-] [filepath]	Sets the current background image to [filepath]"
+	echo -e "	-n	Notify with new filepath"	
+}
+
+
+# VARS
+#######################################
+#######################################
+
+wallpaper=~/.config/wallpaper/wall.jpg
+default_dir=~/Pictures/wallpaper
+fav_dir="$default_dir/favorites"
+notify_text=$(echo "xwallpaper --zoom $2")
+
+# FUNCS
+#######################################
+#######################################
+
+# setfile()
+# Copies the given file to $wallpaper, sets
+# $wallpaper as the wallpaper, and sends a
+# notification displaying $notify_text
+#######################################
+setfile () {
+	[ -f $1 ] && \
+	       	cp "$1" "$wallpaper" && \
+	       	xwallpaper --zoom $wallpaper && \
+		notify-send "$notify_text" 
+}
+# getrandom()
+# Outputs a random image file path from within
+# either a given directory or a default one
+#######################################
+getrandom() {
+	pics_dir=""
+	[ -n "$1" ] && \
+		pics_dir="$1" || \
+		pics_dir="$default_dir"
+	[ -d "$pics_dir" ] && \
+		echo "$(find "$pics_dir" -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -type f | \
+		shuf -n 1)"
+}
+# setrandom()
+# Sets as wallpaper a random image from either
+# a given directory or a default one
+#######################################
+setrandom() {
+	pics_dir="$1"
+	[ -z "$pics_dir" ] && \
+		pics_dir="$default_dir"
+	[ -d "$pics_dir" ] && \
+		setfile $(getrandom "$pics_dir")
+		xwallpaper --zoom "$wallpaper" || \
+			echo "pics_dir: $pics_dir"
+}
+# promptrandom()
+# Prompts for confirmation before setting a
+# random wallpaper from the default directory
+#######################################
+promptrandom() {
+	pic=$(getrandom)
+	read -p "Set background to $pic? [y/n]: " resp
+	[ "$resp" = "y" ] && \
+		setfile "$pic"
+
+}
+
+setfav() {
+	[ ! -d "$fav_dir" ] && mkdir -p "$fav_dir"
+	[ -f $1 ] && cp "$1" "$fav_dir" && \
+		notify-send "Added $1 to $fav_dir" || \
+		echo -e "Error: $?: unable to add $1 to $fav_dir"
+}
+
+listdirs() {
+	echo "Categories:"
+	ls -d $default_dir/*
+}
+
+# RUN
+#######################################
+#######################################
+
+usage () {
+	echo -e "bg	[-fFhr] [filepath]\n\n\tHandles desktop wallpaper images\n"
+	echo -e "	-f  	Sets the wallpaper to a given file & sends notification"
+	echo -e "	-F  	Copies the given image file to a favorites directory" 
+	echo -e "   	-h,	Prints usage information" 
+	echo -e "	--help	"
+	echo -e "	-l	Lists the directories in $default_dir, used as options for 'setbg -r [opt]"
+	echo -e "	-r  	[directory] Sets the wallpaper to a random file, optionally from a given directory"
+	echo -e "		With no args, prompts before setting a random wallpaper from the default directory"
+}
+
+case $1 in
+	-f|f) setfile $2 ;;
+	-F|F) setfav $2 ;;
+	-h|--help) usage ;;
+	-l|l) listdirs ;;
+	-r|r) setrandom $2 ;;
+	-h|h) usage ;;
+	*) xwallpaper --zoom "$wallpaper"
+esac

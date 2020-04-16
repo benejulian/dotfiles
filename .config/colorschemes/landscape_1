@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/mjulian/Pictures/wallpaper/landscape/680446.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#131e08",
+        "foreground": "#d2ded6",
+        "cursor": "#d2ded6"
+    },
+    "colors": {
+        "color0": "#131e08",
+        "color1": "#CCAE4C",
+        "color2": "#447391",
+        "color3": "#85798A",
+        "color4": "#64969A",
+        "color5": "#57A7D4",
+        "color6": "#99AC96",
+        "color7": "#d2ded6",
+        "color8": "#939b95",
+        "color9": "#CCAE4C",
+        "color10": "#447391",
+        "color11": "#85798A",
+        "color12": "#64969A",
+        "color13": "#57A7D4",
+        "color14": "#99AC96",
+        "color15": "#d2ded6"
+    }
+}

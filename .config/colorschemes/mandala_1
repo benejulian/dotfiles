@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/mjulian/Pictures/wallpaper/mandala/651395.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#051217",
+        "foreground": "#c8cbc0",
+        "cursor": "#c8cbc0"
+    },
+    "colors": {
+        "color0": "#051217",
+        "color1": "#9F250F",
+        "color2": "#C14918",
+        "color3": "#8F7155",
+        "color4": "#A28F70",
+        "color5": "#C79E76",
+        "color6": "#608F8E",
+        "color7": "#c8cbc0",
+        "color8": "#8c8e86",
+        "color9": "#9F250F",
+        "color10": "#C14918",
+        "color11": "#8F7155",
+        "color12": "#A28F70",
+        "color13": "#C79E76",
+        "color14": "#608F8E",
+        "color15": "#c8cbc0"
+    }
+}

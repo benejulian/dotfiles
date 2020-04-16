@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/mjulian/Pictures/wallpaper/scifi/1488876-science-fiction-wallpaper-sci-fi-1920x1200-for-android-50.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#1e1a18",
+        "foreground": "#c8c5c4",
+        "cursor": "#c8c5c4"
+    },
+    "colors": {
+        "color0": "#1e1a18",
+        "color1": "#8B5B37",
+        "color2": "#8E705C",
+        "color3": "#78817E",
+        "color4": "#9D8D6E",
+        "color5": "#C89D73",
+        "color6": "#92768B",
+        "color7": "#c8c5c4",
+        "color8": "#8c8989",
+        "color9": "#8B5B37",
+        "color10": "#8E705C",
+        "color11": "#78817E",
+        "color12": "#9D8D6E",
+        "color13": "#C89D73",
+        "color14": "#92768B",
+        "color15": "#c8c5c4"
+    }
+}
