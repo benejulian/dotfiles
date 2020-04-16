@@ -1,0 +1,47 @@
+#!/bin/bash
+#
+#	~/.scripts/logger
+#	Allows me to keep track of the changes I'm making
+#	to various files, packages I'm adding, configurations
+#	I'm setting up, etc.
+#
+
+logpath=~/.log/lggr.log
+
+# USAGE
+usage () {
+	echo -e "USAGE: -e \t opens log file in vim for editing"
+	echo -e "       -n \t prompts to create a new log entry"
+	echo -e "       -l \t prints out the log file"
+}
+
+# PROMPT TO CREATE A NEW LOG ENTRY
+newlog () {
+	echo -e "\n- $(date)" >> $logpath
+	read -p "File path: " f
+	read -p "File type: " t
+	read -p "Action: " a
+	read -p "Notes: " n
+	printf '%s\t\t%s\n' "[FILE]" "$f" >> $logpath
+	printf '%s\t\t%s\n' "[FTYPE]" "$t" >> $logpath
+	printf '%s\t%s\n' "[ACTION]" "$a" >> $logpath
+	[ -n "$n" ] && printf '%s\t\t%s\n' "[NOTES]" "$n" >> $logpath
+}
+
+# RUN
+##########################################################################
+
+# MAKE SURE DIR AND FILE EXIST
+[ ! -d ~/.log ] && mkdir ~/.log
+[ ! -f "$logpath" ] && touch "$logpath" && echo "Created $logpath"
+
+case $1 in
+	-e) vim "$logpath" ;;
+	-l) less "$logpath" ;;
+	-n) newlog ;;
+	*) usage ;;
+esac
+
+echo; exit 0
+
+

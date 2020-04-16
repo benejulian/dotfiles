@@ -1,0 +1,49 @@
+#!/bin/bash
+#
+#	~/.scripts/dot
+#   Takes two filepaths, copies the first file to the
+#   second path, replaces the first file with a link
+#   to the new copy.
+
+root="$HOME/.dotfiles"
+map="$root/dotfiles.db"
+
+# If dotfiles doesn't exist; first time running;
+# new install
+[ ! -d "$root" ] && mkdir "$root" && touch "$map"
+
+check_inputs () {
+	[ ! -f $1 ] && echo "$1 not a file" && exit 1
+       	[ -f $2 } && echo "$2 already exists" && exit 1
+	echo "$1"
+	echo "$2"
+}
+
+# Move file from $src to $dest and create a symlink
+# from $dest to $src
+map_file () {
+	src="$1"
+	dest="$2"
+	path_to_dest="$(dirname $2)"
+
+	# Make the path to the dest if it doesn't exist
+	[ ! -d "$path_to_dest" ] && mkdir -p "$path_to_dest"
+
+	# Move the file
+	mv $src $dest
+
+	# Make the link
+	ln -s $dest $src
+
+	# Add entry to database
+	echo -e "$(realpath -e $src):$(realpath -e $dest)" >> $map
+}
+
+usage () {
+	echo "USAGE: dot -m srcfile destfile"
+}
+
+case $1 in
+	-m) check_inputs $2 $3 && map_file $2 $3 ;;
+	-h|*) usage ;;
+esac

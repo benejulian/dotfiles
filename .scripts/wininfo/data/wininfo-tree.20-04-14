@@ -1,0 +1,11 @@
+
+xwininfo: Please select the window about which you
+          would like information by clicking the
+          mouse in that window.
+
+xwininfo: Window id: 0x1e00002 "polybar-standard_eDP-1"
+
+  Root window id: 0x73a (the root window) "i3"
+  Parent window id: 0x4000b3 "[i3 con] container around 0x5627c3416ac0"
+     0 children.
+

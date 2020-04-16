@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+#	~/.scripts/notebook
+#	
+#
+#
+i3-msg "workspace 4; append_layout ~/.bin/notebook/layouts/layout.json"
+
+code $1
+for i in {0..3};
+do
+    i3-msg "workspace 4; exec urxvt -cd $1"
+done
+
+i3-msg "workspace 4; exec firefox"

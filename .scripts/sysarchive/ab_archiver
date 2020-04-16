@@ -1,0 +1,43 @@
+#!/bin/bash
+#
+#	~/.scripts/ab_archiver
+#	Trying to figure out a good way to create
+#	and maintain archives...
+#
+
+### DIRECTORIES
+###################
+CONFIG=~/.config
+SCRIPTS=~/.scripts
+TEMP=~/.tmp
+
+CNLG=~/Conlang
+DESK=~/Desktop
+DOCS=~/Documents
+DOWN=~/Downloads
+PICS=~/Pictures
+PROJ=~/Projects
+SCHL=~/School
+
+### FILES
+###############
+BASHRC=~/.bashrc
+VIMRC=~/.vimrc
+ZSHRC=~/.zshrc
+XRESOURCES=~/.Xresources
+XINIT=~/.xinitrc
+
+for dir in $CONFIG $SCRIPTS $TEMP
+do
+	echo "$dir"
+done
+
+for dir in $CNLG $DESK $DOCS $DOWN $PICS $PROJ $SCHL
+do
+	echo "$dir"
+done
+
+for f in $BASHRC $VIMRC $ZSHRC $XRESOURCES $XINIT
+do
+	echo "$f"
+done

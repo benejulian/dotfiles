@@ -1,0 +1,22 @@
+AT_SPI_BUS(STRING) = "unix:abstract=/tmp/dbus-aIZDjyq7YJ,guid=537d5985bcca4d039627dcb45e95ddc1"
+GDK_VISUALS(INTEGER) = 1409, 1827
+_NET_ACTIVE_WINDOW(WINDOW): window id # 0x120000a
+_XROOTPMAP_ID(PIXMAP): pixmap id # 0x800000
+ESETROOT_PMAP_ID(PIXMAP): pixmap id # 0x800000
+_NET_DESKTOP_NAMES(UTF8_STRING) = "2", "1"
+_NET_DESKTOP_VIEWPORT(CARDINAL) = 3840, 0, 0, 0
+_NET_NUMBER_OF_DESKTOPS(CARDINAL) = 2
+I3_CONFIG_PATH(UTF8_STRING) = "/home/mjulian/.config/i3/config"
+I3_PID(CARDINAL) = 2318190
+I3_SOCKET_PATH(UTF8_STRING) = "/run/user/1000/i3/ipc-socket.2318190"
+_NET_CLIENT_LIST(WINDOW): window id # 0x100000a, 0x120000a, 0x180000a, 0x1a0000a
+_NET_CLIENT_LIST_STACKING(WINDOW): window id # 0x100000a, 0x1a0000a, 0x120000a, 0x180000a
+_NET_CURRENT_DESKTOP(CARDINAL) = 1
+_NET_SUPPORTED(ATOM) = _NET_SUPPORTED, _NET_SUPPORTING_WM_CHECK, _NET_WM_NAME, _NET_WM_VISIBLE_NAME, _NET_WM_MOVERESIZE, _NET_WM_STATE_STICKY, _NET_WM_STATE_FULLSCREEN, _NET_WM_STATE_DEMANDS_ATTENTION, _NET_WM_STATE_MODAL, _NET_WM_STATE_HIDDEN, _NET_WM_STATE_FOCUSED, _NET_WM_STATE, _NET_WM_WINDOW_TYPE, _NET_WM_WINDOW_TYPE_NORMAL, _NET_WM_WINDOW_TYPE_DOCK, _NET_WM_WINDOW_TYPE_DIALOG, _NET_WM_WINDOW_TYPE_UTILITY, _NET_WM_WINDOW_TYPE_TOOLBAR, _NET_WM_WINDOW_TYPE_SPLASH, _NET_WM_WINDOW_TYPE_MENU, _NET_WM_WINDOW_TYPE_DROPDOWN_MENU, _NET_WM_WINDOW_TYPE_POPUP_MENU, _NET_WM_WINDOW_TYPE_TOOLTIP, _NET_WM_WINDOW_TYPE_NOTIFICATION, _NET_WM_DESKTOP, _NET_WM_STRUT_PARTIAL, _NET_CLIENT_LIST, _NET_CLIENT_LIST_STACKING, _NET_CURRENT_DESKTOP, _NET_NUMBER_OF_DESKTOPS, _NET_DESKTOP_NAMES, _NET_DESKTOP_VIEWPORT, _NET_ACTIVE_WINDOW, _NET_CLOSE_WINDOW, _NET_MOVERESIZE_WINDOW
+_NET_WM_NAME(UTF8_STRING) = "i3"
+_NET_SUPPORTING_WM_CHECK(WINDOW): window id # 0x400063
+XFree86_DDC_EDID1_RAWDATA(INTEGER) = 0, -1, -1, -1, -1, -1, -1, 0, 5, -29, 103, 35, 33, 51, 0, 0, 48, 24, 1, 3, 104, 51, 29, 120, 42, -30, -107, -94, 85, 79, -97, 38, 17, 80, 84, -65, -17, 0, -47, -64, -77, 0, -107, 0, -127, -128, -127, 64, -127, -64, 1, 1, 1, 1, 2, 58, -128, 24, 113, 56, 45, 64, 88, 44, 69, 0, -3, 30, 17, 0, 0, 30, 0, 0, 0, -3, 0, 50, 76, 30, 83, 17, 0, 10, 32, 32, 32, 32, 32, 32, 0, 0, 0, -4, 0, 50, 51, 54, 55, 10, 32, 32, 32, 32, 32, 32, 32, 32, 0, 0, 0, -1, 0, 65, 65, 65, 69, 66, 57, 65, 48, 49, 51, 48, 56, 57, 0, 65
+RESOURCE_MANAGER(STRING) = "*.background:\t#040304\n*.color0:\t#040304\n*.color1:\t#5D5C5D\n*.color10:\t#A43F44\n*.color11:\t#3E9D54\n*.color12:\t#AEA356\n*.color13:\t#404E9B\n*.color14:\t#B050A8\n*.color15:\t#96d0d3\n*.color2:\t#A43F44\n*.color3:\t#3E9D54\n*.color4:\t#AEA356\n*.color5:\t#404E9B\n*.color6:\t#B050A8\n*.color66:\t#040304\n*.color7:\t#96d0d3\n*.color8:\t#699193\n*.color9:\t#5D5C5D\n*.cursorColor:\t#a39a90\n*.foreground:\t#96d0d3\n*background:\t#040304\n*color0:\t#040304\n*color1:\t#5D5C5D\n*color10:\t#A43F44\n*color11:\t#3E9D54\n*color12:\t#AEA356\n*color13:\t#404E9B\n*color14:\t#B050A8\n*color15:\t#96d0d3\n*color2:\t#A43F44\n*color3:\t#3E9D54\n*color4:\t#AEA356\n*color5:\t#404E9B\n*color6:\t#B050A8\n*color66:\t#040304\n*color7:\t#96d0d3\n*color8:\t#699193\n*color9:\t#5D5C5D\n*foreground:\t#96d0d3\nURxvt*background:\t[100]#040304\nURxvt*borderColor:\t[100]#040304\nURxvt*cursorColor:\t#96d0d3\nURxvt*depth:\t32\nURxvt*foreground:\t#96d0d3\nURxvt.cursorBlink:\ttrue\nURxvt.cursorUnderline:\ttrue\nURxvt.font:\txft:LiberationMono:size=10\nURxvt.pointerBlank:\ttrue\nURxvt.pointerBlankDelay:\t5\nURxvt.scrollBar:\tfalse\nURxvt.scrollTtyOutput:\ttrue\nUXTerm*background:\t#040304\nUXTerm*cursorColor:\t#96d0d3\nUXTerm*foreground:\t#96d0d3\nXClock*background:\t#040304\nXClock*foreground:\t#96d0d3\nXClock*hourColor:\trgba:96/d0/d3/ff\nXClock*majorColor:\trgba:96/d0/d3/ff\nXClock*minorColor:\trgba:96/d0/d3/ff\nXClock*minuteColor:\trgba:96/d0/d3/ff\nXClock*secondColor:\trgba:96/d0/d3/ff\nXTerm*background:\t#040304\nXTerm*cursorColor:\t#96d0d3\nXTerm*foreground:\t#96d0d3\nXft.dpi:\t192\nemacs*background:\t#040304\nemacs*foreground:\t#96d0d3\n"
+_XKB_RULES_NAMES(STRING) = "evdev", "pc105", "us", "", ""
+XFree86_has_VT(INTEGER) = 1
+XFree86_VT(INTEGER) = 1

@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+#	~/.scripts/installers
+#	
+#
+#
+
+i3 () {
+    echo -e "i3 window manager\n-----------------"
+    echo -e "sudo pacman -S i3-wm perl-anyevent-i3"
+    echo -e "               (perl-anyevent-i3 is needed for i3-save-tree layout saving to work)"
+}
+
+case $1 in
+    i3) i3 ;;
+    *) i3 ;;
+esac
