@@ -1,0 +1,1472 @@
+{
+    "alsa-utils": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the default config",
+        "type": "sound",
+        "brief": "The Advanced Linux Sound Architecture (ALSA) provides kernel driven sound card drivers.",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture"
+        ]
+    },
+    "asciiquarium": {
+        "dep_on": "perl, perl-term-animation",
+        "dep_of": "",
+        "installation": "sudo pacman -S asciiquarium",
+        "usage": "asciiquarium",
+        "type": "trivial",
+        "brief": "Generates and ascii-drawn aquarium in a terminal window",
+        "links": [
+            "https://robobunny.com/projects/asciiquarium/html/",
+            "https://www.archlinux.org/packages/community/any/asciiquarium/"
+        ]
+    },
+    "autoconf": {
+        "dep_on": "",
+        "dep_of": "jq, others",
+        "installation": "Part of the OS",
+        "type": "system",
+        "brief": "A GNU tool for automatically configuring source code. Part of the GNU Build System, a suite of programming tools designed to assist in making source code packages portable to many Unix-like systems.",
+        "links": [
+            "https://www.archlinux.org/packages/core/any/autoconf/"
+        ]
+    },
+    "automake": {
+        "dep_on": "",
+        "dep_of": "jq, others",
+        "installation": "Part of the OS",
+        "type": "system",
+        "brief": "A GNU tool for automatically creating Makefiles",
+        "links": [
+            "https://www.archlinux.org/packages/core/any/automake/"
+        ]
+    },
+    "base": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "system",
+        "brief": "Contains a minimal package set that defines a basic Arch Linux installation.",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Meta_package_and_package_group#Meta_packages",
+            "https://www.archlinux.org/packages/?name=base"
+        ]
+    },
+    "binutils": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "system",
+        "brief": "A set of programs to assemble and manipulate binary and object files",
+        "links": [
+            "https://www.gnu.org/software/binutils/",
+            "https://www.archlinux.org/packages/core/x86_64/binutils/"
+        ]
+    },
+    "bison": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "system",
+        "brief": "The GNU general-purpose parser generator",
+        "links": [
+            "https://www.gnu.org/software/bison/bison.html",
+            "https://www.archlinux.org/packages/core/x86_64/bison/"
+        ]
+    },
+    "bluez": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S bluez; systemctl enable --now bluetooth.service",
+        "usage": "bluetoothctl [-options]",
+        "type": "sound, connectivity",
+        "brief": "Daemons for the bluetooth protocol stack",
+        "links": [
+            "http://www.bluez.org/",
+            "https://wiki.archlinux.org/index.php/Bluetooth",
+            "https://www.archlinux.org/packages/extra/x86_64/bluez/"
+        ]
+    },
+    "bluez-utils": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Installed with bluez",
+        "type": "sound, connectivity",
+        "brief": "Development and debugging utilities for the bluetooth protocol stack",
+        "links": [
+            "http://www.bluez.org/",
+            "https://wiki.archlinux.org/index.php/Bluetooth",
+            "https://www.archlinux.org/packages/extra/x86_64/bluez-utils/"
+        ]
+    },
+    "code": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S code",
+        "type": "text editing",
+        "brief": "Visual Studio Code is a cross-platform, free and open-source (licensed under the MIT License) text editor developed by Microsoft and written in JavaScript and TypeScript.",
+        "links": [
+            "https://code.visualstudio.com/",
+            "https://wiki.archlinux.org/index.php/Visual_Studio_Code",
+            "https://www.archlinux.org/packages/community/x86_64/code/"
+        ]
+    },
+    "cool-retro-term": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S cool-retor-term",
+        "type": "trivial",
+        "brief": "A good looking terminal emulator which mimics the old cathode display",
+        "links": [
+            "https://github.com/Swordfish90/cool-retro-term/blob/master/README.md",
+            "https://www.archlinux.org/packages/community/x86_64/cool-retro-term/"
+        ]
+    },
+    "deepin-screenshot": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S deepin-screenshot",
+        "type": "utility",
+        "brief": "Easy-to-use screenshot tool for linuxdeepin desktop environment",
+        "links": [
+            "https://www.deepin.org/en/original/deepin-screenshot/",
+            "https://wiki.archlinux.org/index.php/Screen_capture#Dedicated_software",
+            "https://github.com/linuxdeepin/deepin-screenshot/blob/master/README.md"
+        ]
+    },
+    "dmenu": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S dmenu",
+        "type": "utility",
+        "brief": "Dmenu is a fast and lightweight dynamic menu for X",
+        "links": [
+            "https://tools.suckless.org/dmenu/",
+            "https://wiki.archlinux.org/index.php/Dmenu",
+            "https://git.suckless.org/dmenu/"
+        ]
+    },
+    "dunst": {
+        "dep_on": "pango",
+        "dep_of": "transmission-gtk",
+        "installation": "sudo pacman -S dunst; systemctl enable --now dunst; cp /usr/share/dunst/dunstrc ~/.config/dunst/dunstrc",
+        "type": "notifications",
+        "brief": "Dunst is a lightweight replacement for the notification-daemons provided by most desktop environments",
+        "links": [
+            "https://dunst-project.org/",
+            "https://wiki.archlinux.org/index.php/Dunst",
+            "https://www.archlinux.org/packages/community/x86_64/dunst/"
+        ]
+    },
+    "efibootmgr": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Probably installed during the Arch installation",
+        "type": "system",
+        "brief": "Tool to manipulate UEFI Firmware Boot Manager Settings",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface#Userspace_tools",
+            "https://www.archlinux.org/packages/core/x86_64/efibootmgr/",
+            "https://github.com/rhboot/efibootmgr"
+        ]
+    },
+    "fakeroot": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "system",
+        "brief": "Tool for simulating superuser privileges",
+        "links": [
+            "https://www.archlinux.org/packages/core/x86_64/fakeroot/"
+        ]
+    },
+    "feh": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S feh",
+        "type": "images",
+        "brief": "Feh is a lightweight and powerful image viewer that can also be used to manage the desktop wallpaper for standalone window managers lacking such features",
+        "links": [
+            "https://feh.finalrewind.org/",
+            "https://wiki.archlinux.org/index.php/feh",
+            "https://www.archlinux.org/packages/extra/x86_64/feh/"
+        ]
+    },
+    "figlet": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S figlet",
+        "type": "trivial",
+        "brief": "A program for making large letters out of ordinary text",
+        "links": [
+            "http://www.figlet.org/",
+            "https://wiki.archlinux.org/index.php/ASCII_art",
+            "https://www.archlinux.org/packages/extra/x86_64/figlet/"
+        ]
+    },
+    "file": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "system",
+        "brief": "File type identification utility",
+        "links": [
+            "https://www.darwinsys.com/file/",
+            "https://www.archlinux.org/packages/core/x86_64/file/"
+        ]
+    },
+    "findutils": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "system",
+        "brief": "a Core utility, one of the basic, fundamental tools of a GNU/Linux system",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Core_utilities#Essentials",
+            "https://www.archlinux.org/packages/core/x86_64/findutils/"
+        ]
+    },
+    "firefox": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S firefox",
+        "type": "web browser",
+        "brief": "Firefox is a popular open source graphical web browser from Mozilla",
+        "links": [
+            "https://www.mozilla.org/en-US/exp/firefox/",
+            "https://wiki.archlinux.org/index.php/Firefox",
+            "https://www.archlinux.org/packages/?name=firefox"
+        ]
+    },
+    "flex": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "system",
+        "brief": "A tool for generating text-scanning programs",
+        "links": [
+            "https://github.com/westes/flex",
+            "https://www.archlinux.org/packages/core/x86_64/flex/"
+        ]
+    },
+    "gawk": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "utility",
+        "brief": "Utility for pattern scanning and processing language",
+        "links": [
+            "https://www.gnu.org/software/gawk/",
+            "https://wiki.archlinux.org/index.php/Core_utilities#Essentials",
+            "https://www.archlinux.org/packages/core/x86_64/gawk/"
+        ]
+    },
+    "gcc": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "system",
+        "brief": "the GNU Comppiler Collection (GCC) is part of the the GNU toolchain and includes front ends for C and C++",
+        "links": [
+            "https://gcc.gnu.org/",
+            "https://wiki.archlinux.org/index.php/GNU_Compiler_Collection",
+            "https://www.archlinux.org/packages/core/x86_64/gcc/"
+        ]
+    },
+    "gettext": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "system",
+        "brief": "GNU internationalization library",
+        "links": [
+            "https://www.gnu.org/software/gettext/",
+            "https://www.archlinux.org/packages/core/x86_64/gettext/"
+        ]
+    },
+    "git": {
+        "dep_on": "",
+        "dep_of": "AUR packages, yay",
+        "installation": "sudo pacman -S git",
+        "type": "utility",
+        "brief": "Git is a version control system designed by Linus Torvalds, creator of the Linux kernel.",
+        "links": [
+            "https://wiki.archlinux.org/index.php/git",
+            "https://en.wikipedia.org/wiki/Git"
+        ]
+    },
+    "grep": {
+        "dep_on": "",
+        "dep_of": "utility",
+        "installation": "Part of the OS",
+        "type": "utility",
+        "brief": "A utility that searches one or mor einput files for lines containing a match to a specified pattern, and by default outputs the matching lines",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Core_utilities#Essentials",
+            "https://www.gnu.org/software/grep/"
+        ]
+    },
+    "groff": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "utility, text editing",
+        "brief": "Groff (GNU troff) is a typesetting system that reads plain text mixed with formatting commands and produces formatted output",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Groff",
+            "https://en.wikipedia.org/wiki/Groff_(software)"
+        ]
+    },
+    "grub": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S grub",
+        "type": "system",
+        "brief": "Grub is a multi-boot loader, a piece of software responsible for loading the kernel and initial RAM disk.",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Arch_boot_process",
+            "https://wiki.archlinux.org/index.php/GRUB"
+        ]
+    },
+    "gvim": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S gvim",
+        "type": "text editing",
+        "brief": "Vi Improved, a highly configurable, improved version of the vi text editor (with advanced features, such as a GUI)",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Vim",
+            "https://www.vim.org/",
+            "https://www.archlinux.org/packages/extra/x86_64/gvim/"
+        ]
+    },
+    "gzip": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S gzip",
+        "type": "utility",
+        "brief": "GNU compression utility",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Archiving_and_compression",
+            "https://en.wikipedia.org/wiki/Gzip",
+            "https://www.archlinux.org/packages/core/x86_64/gzip/"
+        ],
+        "manual": "https://jlk.fjfi.cvut.cz/arch/manpages/man/gzip.1"
+    },
+    "hsetroot": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S hsetroot",
+        "type": "image",
+        "brief": "Tool which allows you to compose wallpapers ('root pixmaps') for X",
+        "links": [
+            "https://github.com/himdel/hsetroot",
+            "https://www.archlinux.org/packages/community/x86_64/hsetroot/"
+        ]
+    },
+    "htop": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S htop",
+        "type": "utility",
+        "brief": "Simple, ncurses interactive process viewer",
+        "links": [
+            "https://wiki.archlinux.org/index.php/List_of_applications/Utilities#System",
+            "http://hisham.hm/htop/",
+            "https://www.archlinux.org/packages/extra/x86_64/htop/"
+        ]
+    },
+    "i3-wm": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S i3-wm",
+        "type": "",
+        "brief": "i3 is a dynamic tiling window manager primarily targeted at developers and advanced users",
+        "links": [
+            "https://i3wm.org/docs/",
+            "https://wiki.archlinux.org/index.php/I3"
+        ]
+    },
+    "joplin": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "",
+        "type": "",
+        "brief": "delete me",
+        "links": []
+    },
+    "jq": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S jq",
+        "type": "utility",
+        "brief": "jq is a lightweight and flexible command-line JSON processor utility",
+        "links": [
+            "https://stedolan.github.io/jq/",
+            "https://www.archlinux.org/packages/community/x86_64/jq/"
+        ]
+    },
+    "libnotify": {
+        "dep_on": "",
+        "dep_of": "dunst",
+        "installation": "sudo pacman -S libnotify",
+        "type": "system",
+        "brief": "Libnotify is an implementation of the Desktop Notifications Specification which provides support of GTK and Qt applications and is desktop independent",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Desktop_notifications",
+            "https://www.archlinux.org/packages/extra/x86_64/libnotify/"
+        ]
+    },
+    "libtool": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "system",
+        "brief": "A generic library support script",
+        "links": [
+            "https://www.gnu.org/software/libtool",
+            "https://www.archlinux.org/packages/core/x86_64/libtool/"
+        ]
+    },
+    "linux": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "system",
+        "brief": "The Linux kernels and modules",
+        "links": [
+            "https://git.archlinux.org/linux.git/log/"
+        ]
+    },
+    "linux-firmware": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "system",
+        "brief": "Firmware files for Linux",
+        "links": [
+            "https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git",
+            "https://www.archlinux.org/packages/core/any/linux-firmware/"
+        ]
+    },
+    "lolcat": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S lolcat",
+        "type": "trivial",
+        "brief": "Rainbow colors terminal text",
+        "links": [
+            "https://github.com/busyloop/lolcat",
+            "https://www.archlinux.org/packages/community/any/lolcat/"
+        ]
+    },
+    "m4": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "system",
+        "brief": "The GNU macro processor",
+        "links": [
+            "https://www.gnu.org/software/m4",
+            "https://www.archlinux.org/packages/core/x86_64/m4/"
+        ]
+    },
+    "make": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "utility",
+        "brief": "GNU make utility to maintain groups of programs",
+        "links": [
+            "https://www.gnu.org/software/make",
+            "https://www.archlinux.org/packages/core/x86_64/make/"
+        ]
+    },
+    "mpv": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S mpv",
+        "type": "sound",
+        "brief": "A media player that supports a wide variety of video file formats, audio and video codecs, and subtitle types.",
+        "links": [
+            "https://mpv.io/",
+            "https://wiki.archlinux.org/index.php/Mpv",
+            "https://www.archlinux.org/packages/community/x86_64/mpv/"
+        ]
+    },
+    "nano": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S nano",
+        "type": "text editing",
+        "brief": "GNU nano is a text editor which aims to introduce a simple interface and intuitive command option to console based text editing",
+        "links": [
+            "https://www.nano-editor.org/",
+            "https://wiki.archlinux.org/index.php/nano",
+            "https://www.archlinux.org/packages/core/x86_64/nano/"
+        ]
+    },
+    "networkmanager": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S networkmanager; systemctl enable --now NetworkManager.service",
+        "type": "networking",
+        "brief": "NetworkManager is a program for providing detection and configuration for systems to automatically connect to networks",
+        "links": [
+            "https://wiki.gnome.org/Projects/NetworkManager/",
+            "https://wiki.archlinux.org/index.php/NetworkManager",
+            "https://www.archlinux.org/packages/extra/x86_64/networkmanager/"
+        ]
+    },
+    "noto-fonts-emoji": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S noto-fonts-emoji",
+        "type": "font",
+        "brief": "Google's emoji font, such as on Android",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Fonts#Emoji_and_symbols",
+            "https://www.archlinux.org/packages/extra/any/noto-fonts-emoji/"
+        ]
+    },
+    "npm": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S nodejs",
+        "type": "utility",
+        "brief": "A package manager for JavaScript",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Node.js",
+            "https://www.archlinux.org/packages/community/any/npm/"
+        ]
+    },
+    "numlockx": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S numlockx --> add 'numlockx &' to .xinitrc",
+        "type": "utility",
+        "brief": "Turns on the numlock key in X11",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Activating_numlock_on_bootup",
+            "https://www.archlinux.org/packages/community/x86_64/numlockx/",
+            "https://github.com/rg3/numlockx"
+        ]
+    },
+    "openssh": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S openssh",
+        "type": "utility",
+        "brief": "Connectivity tool for remote login with the SSH protocol",
+        "links": [
+            "https://wiki.archlinux.org/index.php/OpenSSH",
+            "https://www.archlinux.org/packages/core/x86_64/openssh/"
+        ]
+    },
+    "pacman": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "utility",
+        "brief": "Package manager for Arch Linux",
+        "links": [
+            "https://wiki.archlinux.org/index.php/pacman",
+            "https://www.archlinux.org/pacman/"
+        ]
+    },
+    "patch": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "utility",
+        "brief": "A utility to apply patch files to original sources",
+        "links": [
+            "https://www.gnu.org/software/patch/",
+            "https://www.archlinux.org/packages/core/x86_64/patch/"
+        ]
+    },
+    "pavucontrol": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S pavucontrol",
+        "type": "sound",
+        "brief": "Pulseaudio volume control",
+        "links": [
+            "https://freedesktop.org/software/pulseaudio/pavucontrol/"
+        ]
+    },
+    "perl-anyevent-i3": {
+        "dep_on": "",
+        "dep_of": "i3-wm, i3-gaps",
+        "installation": "sudo pacman -S perl-anyevent-i3",
+        "type": "utility",
+        "brief": "Communicate with the i3 window manager",
+        "links": [
+            "https://www.archlinux.org/packages/community/any/perl-anyevent-i3/"
+        ]
+    },
+    "picom": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S picom",
+        "type": "utility",
+        "brief": "A standalone compositor for Xorg, suitable for use with window managers that do not provide compositing",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Picom",
+            "https://www.archlinux.org/packages/community/x86_64/picom/"
+        ]
+    },
+    "pkgconf": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "utility",
+        "brief": "Package compiler and linker metadata toolkit",
+        "links": [
+            "https://www.archlinux.org/packages/core/x86_64/pkgconf/"
+        ]
+    },
+    "polybar": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "yay -S polybar || git clone https://github.com/polybar/polybar.git",
+        "type": "utility",
+        "brief": "A tool for creating status bars",
+        "links": [
+            "https://polybar.github.io/",
+            "https://wiki.archlinux.org/index.php/Polybar",
+            "https://aur.archlinux.org/packages/polybar/",
+            "https://github.com/polybar/polybar"
+        ]
+    },
+    "pulseaudio-alsa": {
+        "dep_on": "pulseaudio, alsa",
+        "dep_of": "",
+        "installation": "sudo pacman -S pulseaudio pulseaudio-alsa",
+        "type": "utility",
+        "brief": "ALSA configuration for PulseAudio",
+        "links": [
+            "https://www.freedesktop.org/wiki/Software/PulseAudio/",
+            "https://wiki.archlinux.org/index.php/PulseAudio",
+            "https://www.archlinux.org/packages/extra/any/pulseaudio-alsa/"
+        ]
+    },
+    "pulseaudio-bluetooth": {
+        "dep_on": "pulseaudio, bluez",
+        "dep_of": "",
+        "installation": "sudo pacman -S pulseaudio pulseaudio-bluetooth",
+        "type": "utility",
+        "brief": "Bluetooth support for PulseAudio",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Bluetooth_headset",
+            "https://www.archlinux.org/packages/extra/x86_64/pulseaudio-bluetooth/"
+        ]
+    },
+    "python-pywal": {
+        "dep_on": "python",
+        "dep_of": "",
+        "installation": "sudo pacman -S python-pywal",
+        "type": "utility",
+        "brief": "Generates and changes colorschemes",
+        "links": [
+            "https://www.archlinux.org/packages/community/any/python-pywal/",
+            "https://github.com/dylanaraps/pywal/"
+        ]
+    },
+    "ranger": {
+        "dep_on": "python",
+        "dep_of": "",
+        "installation": "sudo pacman -S ranger",
+        "type": "utility",
+        "brief": "A text-based file manager",
+        "links": [
+            "http://ranger.github.io/",
+            "https://wiki.archlinux.org/index.php/Ranger",
+            "https://www.archlinux.org/packages/community/any/ranger/"
+        ]
+    },
+    "redshift": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S redshift",
+        "type": "utility",
+        "brief": "Adjusts the color temperature of the screen",
+        "links": [
+            "http://jonls.dk/redshift/",
+            "https://wiki.archlinux.org/index.php/Redshift",
+            "https://www.archlinux.org/packages/community/x86_64/redshift/"
+        ]
+    },
+    "rxvt-unicode-pixbuf": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "yay -S rxvt-unicode-pixbuf",
+        "type": "utility",
+        "brief": "Unicode enabled rxvt-clone terminal emulator (urxvt), with support for custom icons and backgrounds",
+        "links": [
+            "http://software.schmorp.de/pkg/rxvt-unicode.html",
+            "https://aur.archlinux.org/packages/rxvt-unicode-pixbuf"
+        ]
+    },
+    "sed": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "utility",
+        "brief": "GNU stream editor",
+        "links": [
+            "https://www.gnu.org/software/sed/",
+            "https://www.archlinux.org/packages/core/x86_64/sed/"
+        ]
+    },
+    "shtool": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "utiltiy",
+        "brief": "Compilation of small, stable, portable shells scripts into a single tool",
+        "links": [
+            "https://www.gnu.org/software/shtool/",
+            "https://aur.archlinux.org/packages/shtool/"
+        ]
+    },
+    "sudo": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "utility",
+        "brief": "Gives certain users the ability to run commmands as root",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Sudo",
+            "https://www.archlinux.org/packages/core/x86_64/sudo/"
+        ]
+    },
+    "texinfo": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "utiltiy",
+        "brief": "GNU documentation system/syntax for online information and printed output",
+        "links": [
+            "https://www.gnu.org/software/texinfo/",
+            "https://wiki.archlinux.org/index.php/GNU#Texinfo",
+            "https://www.archlinux.org/packages/core/x86_64/texinfo/"
+        ]
+    },
+    "tmux": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S tmux",
+        "type": "text editor",
+        "brief": "Terminal multiplexer which allows a number of terminals (or windows) to be created and accessed from a single screen",
+        "links": [
+            "https://github.com/tmux/tmux/wiki",
+            "https://wiki.archlinux.org/index.php/Tmux",
+            "https://www.archlinux.org/packages/community/x86_64/tmux/"
+        ]
+    },
+    "torguard": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Download from website",
+        "type": "VPN",
+        "brief": "Tunnels internet traffic through a dedicated VPN",
+        "links": [
+            "https://torguard.net/downloads.php"
+        ]
+    },
+    "transmission-cli": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S transmission-cli",
+        "type": "torrents",
+        "brief": "BitTorrent client (cli tools, daemon, & web client",
+        "links": [
+            "https://transmissionbt.com/",
+            "https://wiki.archlinux.org/index.php/transmission",
+            "https://www.archlinux.org/packages/extra/x86_64/transmission-cli/"
+        ]
+    },
+    "ttf-comfortaa": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "",
+        "type": "Sans serif font",
+        "brief": "",
+        "links": []
+    },
+    "ttf-font-awesome": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "",
+        "type": "Icon font",
+        "brief": "",
+        "links": []
+    },
+    "ttf-inconsolata": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "",
+        "type": "Monospace font",
+        "brief": "",
+        "links": []
+    },
+    "ttf-joypixels": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "",
+        "type": "Emoji font",
+        "brief": "",
+        "links": []
+    },
+    "ttf-linux-libertine": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "",
+        "type": "Mono and sans font",
+        "brief": "",
+        "links": []
+    },
+    "ttf-symbola": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "",
+        "type": "Emoji font",
+        "brief": "",
+        "links": []
+    },
+    "unzip": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S unzip",
+        "type": "utility",
+        "brief": "Tool for extracting and viewing files in .zip archives",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Archiving_and_compression",
+            "https://www.archlinux.org/packages/extra/x86_64/unzip/"
+        ]
+    },
+    "vlc": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S vlc",
+        "type": "video",
+        "brief": "Multi-platform MPEG, VCD/DVD, and DivX player",
+        "links": [
+            "https://www.videolan.org/vlc/download-archlinux.html",
+            "https://wiki.archlinux.org/index.php/VLC_media_player",
+            "https://www.archlinux.org/packages/extra/x86_64/vlc/"
+        ]
+    },
+    "vnstat": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S vnstat",
+        "type": "utility",
+        "brief": "A console-based network traffic monitor",
+        "links": [
+            "https://wiki.archlinux.org/index.php/VnStat",
+            "https://www.archlinux.org/packages/community/x86_64/vnstat/"
+        ]
+    },
+    "which": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of the OS",
+        "type": "utility",
+        "brief": "A utility to show the full paths of commands",
+        "links": [
+            "https://savannah.gnu.org/projects/which/",
+            "https://www.archlinux.org/packages/core/x86_64/which/"
+        ]
+    },
+    "xclip": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S xclip",
+        "type": "utility",
+        "brief": "Command line interface to the X11 clipboard",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Clipboard#Tools",
+            "https://www.archlinux.org/packages/extra/x86_64/xclip/",
+            "https://github.com/astrand/xclip"
+        ]
+    },
+    "xf86-input-synaptics": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "utiltiy, mouse, touchpad",
+        "brief": "Synaptics drivers for notebook touchpads",
+        "links": [
+            "https://www.archlinux.org/packages/extra/x86_64/xf86-input-synaptics/"
+        ]
+    },
+    "xf86-video-intel": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S xf86-video-intel",
+        "type": "utility, video",
+        "brief": "X.org Intel i810/i830/i915/945G/G965+ video drivers",
+        "links": [
+            "https://wiki.archlinux.org/index.php/intel_graphics",
+            "https://www.archlinux.org/packages/extra/x86_64/xf86-video-intel/"
+        ]
+    },
+    "xf86-video-vesa": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S xf86-video-vesa",
+        "type": "utility, video",
+        "brief": "X.org vesa default video driver",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg#Driver_installation",
+            "https://www.archlinux.org/packages/extra/x86_64/xf86-video-vesa/"
+        ]
+    },
+    "xorg-bdftopcf": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "utility, font",
+        "brief": "Convert X font from bitmap distribution to portable compiled format",
+        "links": [
+            "https://www.archlinux.org/packages/extra/x86_64/xorg-bdftopcf/"
+        ]
+    },
+    "xorg-docs": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "documentation",
+        "brief": "X.org documentation/man pages",
+        "links": [
+            "https://www.archlinux.org/packages/extra/any/xorg-docs/"
+        ]
+    },
+    "xorg-font-util": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-fonts-100dpi": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-fonts-75dpi": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-fonts-encodings": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-iceauth": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-luit": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-mkfontscale": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-server": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-server-common": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-server-devel": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-server-xephyr": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-server-xnest": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-server-xvfb": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-server-xwayland": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-sessreg": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-setxkbmap": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-smproxy": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-x11perf": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xauth": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xbacklight": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xcmsdb": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xcursorgen": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xdpyinfo": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xdriinfo": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xev": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xgamma": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xhost": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xinit": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xinput": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xkbcomp": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xkbevd": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xkbutils": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xkill": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xlsatoms": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xlsclients": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xmodmap": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xpr": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xprop": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xrandr": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xrdb": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xrefresh": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xset": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xsetroot": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xvinfo": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xwd": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xwininfo": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xorg-xwud": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "Part of xorg",
+        "type": "",
+        "brief": "",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Xorg"
+        ]
+    },
+    "xwallpaper": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S xwallpaper",
+        "type": "utility",
+        "brief": "Utility for setting wallpaper in X",
+        "links": [
+            "https://www.archlinux.org/packages/community/x86_64/xwallpaper/",
+            "https://github.com/stoeckmann/xwallpaper"
+        ]
+    },
+    "yay-git": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si",
+        "type": "utility, package manager",
+        "brief": "Pacman wrapper & AUR helper, installs packages from the AUR",
+        "links": [
+            "https://aur.archlinux.org/",
+            "https://aur.archlinux.org/packages/yay-git/",
+            "https://github.com/Jguer/yay"
+        ]
+    },
+    "zathura": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S zathura",
+        "type": "utility",
+        "brief": "Document viewer",
+        "links": [
+            "https://wiki.archlinux.org/index.php/Zathura",
+            "https://www.archlinux.org/packages/community/x86_64/zathura/",
+            "https://git.pwmt.org/pwmt/zathura"
+        ]
+    },
+    "zathura-pdf-poppler": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S zathura-pdf-poppler",
+        "type": "utility",
+        "brief": "Adds pdf support to zathura by using the poppler engine",
+        "links": [
+            "https://www.archlinux.org/packages/community/x86_64/zathura-pdf-poppler/"
+        ]
+    },
+    "zathura-ps": {
+        "dep_on": "",
+        "dep_of": "",
+        "installation": "sudo pacman -S zathura-ps",
+        "type": "utility",
+        "brief": "Adds ps support to zathura by using the libspectre library",
+        "links": [
+            "https://www.archlinux.org/packages/community/x86_64/zathura-ps/"
+        ]
+    }
+}
